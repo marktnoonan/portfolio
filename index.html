@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="People Making Progress" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://peoplemakingprogressinc.org/donate/" />
+	<meta property="og:image" content="https://peoplemakingprogressinc.org/donate/gagives1.jpg" />
+	<meta property="og:video" content="https://www.youtube.com/watch?v=pGDlgwMZZoA" />
+	<title>Donate to People Making Progress this Giving Tuesday</title>
+	<style media="screen">
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			padding: 0;
+			margin: 0;
+			color: rgba(29, 19, 40, 0.9);
+			height: 100%;
+			background-color: #dcd9e3;
+		}
+
+		#twitter-widget-0 {
+			vertical-align: bottom;
+		}
+
+		.bg {
+			background: linear-gradient(to bottom, #533E7F 0%, rgba(0, 0, 0, 0.1) 100%);
+			height: 100vh;
+			width: 100vw;
+			position: fixed;
+			content: "";
+		}
+
+		nav {
+			background-color: #533E7F;
+			padding: 4px 0;
+			margin: 0;
+			min-height: 40px;
+			position: fixed;
+			top: 0;
+			text-align: left;
+			width: 100%;
+			height: 50px;
+			z-index: 1000;
+			border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+			vertical-align: middle;
+			box-sizing: border-box;
+		}
+
+		main {
+			/* background: linear-gradient(to bottom, #533E7F 0%, rgba(255, 255, 255, 1) 100%); */
+			padding-top: 50px;
+			padding: 0;
+			text-align: center;
+		}
+
+		b {
+			font-weight: 700;
+		}
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		h3 {
+			margin-bottom: 6px;
+			margin-top: 2px;
+		}
+
+		p {
+			max-width: 500px;
+			display: inline-block;
+			text-align: left;
+		}
+
+		.effects-container {
+			box-sizing: border-box;
+			position: relative;
+			display: inline-block;
+			text-align: left;
+			text-align: center;
+		}
+
+		.cta {
+			position: fixed;
+			height: 90vh;
+			width: 500px;
+			top: 60px;
+			left: 430px;
+			border-radius: 3px;
+			border: 1px solid rgba(0, 0, 0, 0.4);
+			background-color: #CEB1CC;
+		}
+
+		.logo {
+			height: 40px;
+		}
+
+		.effects-list {
+			display: inline-block;
+		}
+
+		ul {
+			list-style-type: none;
+			margin-top: 10px;
+			padding: 0;
+			/*max-width: 800px;*/
+			display: table;
+			margin-bottom: 40px;
+		}
+
+		li {
+			margin-bottom: 4px;
+			box-sizing: border-box;
+			position: relative;
+			margin: 1px;
+			display: inline-block;
+			min-width: 290px;
+			padding: 10px 8px;
+			border-radius: 3px;
+			text-align: center;
+			vertical-align: top;
+		}
+
+		.description {
+			display: inline-block;
+			margin: 0;
+			/*opacity: 0.5;*/
+			animation: linear 1s straighten forwards paused;
+			text-align: inherit;
+			font-size: 14px;
+		}
+
+		@keyframes straighten {
+			from {}
+
+			to {
+				transform: rotateZ(0deg);
+				opacity: 1;
+			}
+		}
+
+		.intro {
+			padding: 0;
+			/* background: linear-gradient(to bottom, #533E7F 0%, rgba(255, 255, 255, 1) 100%); */
+			width: 100%;
+			min-height: 100vh;
+			display: block;
+			position: absolute;
+			top: 40px;
+			left: 0;
+			z-index: 900;
+			transition: opacity .2s linear;
+		}
+
+		.intro-title {
+			font-size: 2.4em;
+		}
+
+		.intro-content {
+			position: relative;
+			padding: 40px;
+			display: inline-block;
+			width: 95vw;
+			box-sizing: border-box;
+			padding: 10px;
+			background-color: rgba(255, 255, 255, 0.5);
+			color: inherit;
+			margin-bottom: 100px;
+		}
+
+		.demo {
+			text-align: center;
+			box-sizing: border-box;
+		}
+
+		.demo-container {
+			position: relative;
+		}
+
+		.hidden {
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		.details {
+			display: none
+		}
+
+		.button {
+			display: inline-block;
+			color: rgba(255, 255, 255, 0.9);
+			padding: .5em;
+			border-radius: 4px;
+			border: 0;
+			margin: 10px;
+			background-color: rgba(62, 83, 127, 1);
+			border: 1px solid rgba(0, 0, 0, 0.3);
+			font-family: sans-serif;
+			font-size: .8em;
+			vertical-align: middle;
+		}
+
+		.support {
+			color: rgba(0, 0, 0, 0.8);
+			background-color: #F2BC40;
+			padding: 14px 25px 15px 25px;
+			font-size: 1.2em;
+		}
+
+		.support-mini {
+			color: rgba(0, 0, 0, 0.8);
+			background-color: #F2BC40;
+		}
+
+		select {
+			font-size: 14px;
+		}
+
+		.video {
+			box-sizing: border-box;
+			margin-top: 20px;
+			margin-right: 10px;
+			display: inline-block;
+			width: 380px;
+			min-height: 200px;
+			vertical-align: top;
+		}
+
+		.video-wrapper {
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 35px;
+			height: 0;
+			overflow: hidden;
+			max-width: 100%;
+		}
+
+		.breadcrumb {
+			display: inline-block;
+			cursor: pointer;
+			margin: 2px 2px 0 2px;
+		}
+
+		.effect-content {
+			text-align: left;
+			display: inline-block;
+			min-width: 200px;
+			padding-left: 4px;
+			padding-top: 10px;
+		}
+
+		.effect-image {
+			display: inline-block;
+			vertical-align: top;
+			border-radius: 50%;
+			box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+			margin: 10px;
+			height: 80px
+		}
+
+		.demo-title {
+			color: rgba(255, 255, 255, 0.9);
+		}
+
+		.intro-text {
+			display: inline-block;
+			color: inherit;
+			margin: 20px 0 0 0;
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+
+
+		.nav-content {
+			color: rgba(255, 255, 255, 0.6);
+			float: right;
+			padding-right: 20px;
+			vertical-align: middle;
+			margin-top: 10px;
+		}
+
+		.nav-content:hover {
+			color: #fff;
+		}
+
+		.footer {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			padding: 1rem;
+			font-size: .8em;
+			padding-top: 60px;
+			text-align: center;
+		}
+
+		.learn-more {
+			vertical-align: top;
+			position: relative;
+			top: 50%;
+			width: 84px;
+			text-align: center;
+			transform: translateY(-50%);
+		}
+
+		.faded {
+			opacity: 0.5;
+		}
+
+		#intro {
+			padding-left: 10px;
+		}
+
+		.details-text {
+			display: inline-block;
+			text-align: left;
+			background-color: rgba(255, 255, 255, 0.5);
+			padding: 2.2em;
+			border-radius: 4px;
+			box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.5);
+		}
+
+		@media screen and (max-width: 786px) {
+			.effect-content {
+				text-align: center;
+				display: inline-block;
+				min-width: 200px;
+				padding-left: 0;
+				padding-top: 0;
+			}
+			.learn-more {
+				position: relative;
+				top: 50%;
+				width: 84px;
+				text-align: center;
+			}
+		}
+
+		@media screen and (max-width: 681px) {
+
+			.learn-more {
+				transform: translateY(0);
+			}
+			.video {
+				width: 310px
+			}
+			.faded {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 400px) {
+			.video {
+				width: 280px
+			}
+			#intro {
+				padding-left: 0;
+			}
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="fb-root"></div>
+	<script>
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.11';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<div class="bg"></div>
+	<nav id="top">
+		<img src="./img/PMP_Logo_home.jpg" class="logo" alt="People Making Progress Logo">
+		<div class="nav-content">
+			<a href="https://www.peoplemakingprogressinc.org">Return to Main PMP site &gt;</a>
+		</div>
+
+	</nav>
+
+	<main>
+		<section class="intro">
+			<div class="intro-content">
+				<div class="video">
+					<div id="iframe-wrapper" class="video-wrapper">
+						<iframe id="youtube-vids" src="https://www.youtube.com/embed/pGDlgwMZZoA?modestbranding=1" frameborder="0" allowfullscreen=""
+						 style="position: absolute; top:0; left: 0; width: 100%; height: 100%;"></iframe>
+					</div>
+				</div>
+				<div class="intro-text">
+					<h2>Donate to People Making Progress</h2>
+					<p id="intro">
+						PMP is a non-profit that provides services through a combination of government funding and private donors. The generosity
+						of our donors empowers us to go beyond what can be accomplished with government funding alone and strive to provide
+						a truly excellent experience for the people we serve. This leads to value beyond the lives of these individuals, and
+						benefits for local businesses and the community in general. We believe this combination of effects is well worth your
+						investment.
+					</p>
+					<br>
+				</div>
+				<br>
+				<br> Choose a donation amount:
+				<select id="donation-amount" onChange="setDonationLevel(this.value)">
+					<option value="5">$5</option>
+					<option value="20" selected>$20</option>
+					<option value="50">$50</option>
+					<option value="100">$100</option>
+					<option value="">Custom</option>
+				</select>
+				<br>
+				<a class="button support" href="https://www.gagives.org/c/GGD/a/peoplemakingprogressinc/donate/?t=20" id="donation-link">
+					Donate Now ➠</a>
+				<br>
+				<div class="social-wrapper">
+					<div class="fb-share-button" data-href="https://peoplemakingprogressinc.org/donate/" data-layout="button" data-size="large"
+					 data-mobile-iframe="true">
+						<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpeoplemakingprogressinc.org%2Fdonate%2F&amp;src=sdkpreparse">Share</a>
+					</div>
+					<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a>
+				</div>
+
+
+
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<hr>
+				<h2>What Your Donation Can Do</h2>
+
+				<div class="demo-container">
+					<br>
+					<div class="effects-container" id="effects-container">
+						<div id="effects-list" class="effects-list">
+							<ul>
+								<li id="0">
+									<img src="./img/0.png" class="effect-image">
+									<div class="effect-content">
+										<h3>Supported Employment</h3>
+										<p class="description">Your donation will help people with developmental disabilities find jobs, and receive the individualized
+											<b>ongoing support, skills training, and onsite coaching</b> needed to succeed in a position for the long term.
+											<span class="description details" id="se">
+												<br>
+												<span class="details-text">
+													In 1996 a new Hotel was opening in midtown Atlanta. PMP approached hotel management with a proposal to staff the dish room
+													with persons with disabilities. The concept of supported employment was explained to the management team with
+													the understanding that a PMP job coach would support the utility crew throughout their shifts in the dish room.
+													<br>
+													<br>Despite some misgivings especially considering that the entire complex would be undergoing the inevitable start
+													up problems of any business, management gave PMP a chance and hired several persons with developmental disabilities
+													as employees. The Hotel had its Grand Opening early the next year with the PMP utility crew manning the dish
+													room. All these years later it is a relationship that works.
+													<br>
+													<br>The People Making Progress consumers, who are supported by hotel management and co-workers alike, keep the dish
+													room functioning and are an integral part of the operation and culture that provides Five Star Service to visitors
+													to Atlanta.
+												</span>
+											</span>
+										</p>
+										<a id="learnse" href="#detail=se" class="button learn-more" onclick="document.getElementById('se').style.display='inline-block'; this.classList.add('faded')">Learn More</a>
+									</div>
+								</li>
+								<li id="1">
+									<img src="./img/2.png" class="effect-image">
+									<div class="effect-content">
+										<h3>Community Living Support</h3>
+										<p class="description">Your donation will help fund
+											<b>wider access to activities, classes, and trainings</b> that are of interest to each individual. Whether competing
+											in athletic events, or learning topics such as sign language, nutrition, and music, donations make it possible
+											to do more.
+											<span class="description details" id="cls">
+												<br>
+												<span class="details-text">
+													After Mark finished high school, he and his Dad were inseparable; their whole world revolving solely around each other. Then
+													Mark’s Dad died and Mark was lost. Mark’s siblings approached our founder Dorothy Miller to see if perhaps PMP
+													could help fill some of the void in Mark’s life. Each sibling would have happily taken Mark into their home
+													to live, but was that what was best for Mark? They had heard of Dorothy Miller and her vision of community living
+													for persons with developmental disabilities. Could Mark be part of that vision?
+													<br>
+													<br>Mark, his siblings and Dorothy put their heads together and within six months Mark had purchased his own condominium,
+													was living on his own with individualized support, and had begun to form his own circle of friends. On the day
+													Mark took the key and opened his own front door he said “I wish Dad could see me now.”
+												</span>
+											</span>
+										</p>
+										<a id="learncls" href="#detail=cls" class="button learn-more" onclick="document.getElementById('cls').style.display='inline-block'; this.classList.add('faded')">Learn More</a>
+									</div>
+								</li>
+								<br>
+								<li id="2">
+									<img src="./img/1.png" class="effect-image">
+									<div class="effect-content">
+										<h3>Community Access</h3>
+										<p class="description">Your donation will help people with developmental disabilities
+											<b>participate in and contribute to their local community</b>. PMP participants provide thousands of hours of volunteer
+											service to Atlanta-area nonprofits annually, and been recognized with awards both locally and nationally.
+											<span class="description details" id="cag">
+												<br>
+												<span class="details-text">
+													People Making Progress had helped Jennifer secure a job before she graduated from high school. Unfortunately, due to the
+													economy and her increasing medical needs, Jennifer was no longer able to retain employment. Jennifer and her
+													family began exploring options.
+													<br>
+													<br>Jennifer said that she wanted to spend time with her friends doing fun things such as going out to eat or to
+													the movies. Jennifer’s parents did not want her to sit at home, continue to struggle and face disappointment
+													with not finding a job or to lose her work skills.
+													<br>
+													<br>In 2004, Jennifer joined her friends and PMP in designing a community support program. PMP consumers have fun
+													exploring their community and maintain job skills by providing much needed regular weekly volunteer service
+													to other non-profits. In 2010, PMP was named the Civic Group of the Year by the Atlanta Community Food Bank
+													and received the President’s Volunteer Service Award.
+												</span>
+											</span>
+										</p>
+										<a id="learncag" href="#detail=cag" class="button learn-more" onclick="document.getElementById('cag').style.display='inline-block'; this.classList.add('faded')">Learn More</a>
+									</div>
+								</li>
+								<li id="3">
+									<img src="./img/3.png" class="effect-image">
+									<div class="effect-content">
+										<h3>Employee Retention</h3>
+										<p class="description">Your donation will help people with developmental disabilities maintain
+											<b>long term relationships</b> with the people they like, by helping us compensate employees fairly and provide jobs
+											that can grow with them over a lifetime of work.
+											<span class="description details" id="er">
+												<br>
+												<span class="details-text">
+													Great employees are the heart of any organization, and turnover is a problem for all nonprofits. Many of our employees have
+													worked with us for years, allowing relationships to flourish between them and the people we serve.
+												</span>
+											</span>
+										</p>
+										<a id="learner" href="#detail=er" class="button learn-more" onclick="document.getElementById('er').style.display='inline-block'; this.classList.add('faded')">Learn More</a>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<hr> People Making Progress
+				<br> 2345 Fourth Street Suite 100
+				<br> Tucker, Georgia 30084
+				<br> Phone: 770.723.1848
+			</footer>
+
+
+		</section>
+
+	</main>
+
+	<script type="text/javascript">
+		function setDonationLevel(amount) {
+			var donationLink = document.getElementById('donation-link');
+			if (amount !== "") {
+				donationLink.href = "https://www.gagives.org/c/GGD/a/peoplemakingprogressinc/donate/?t=" + amount;
+			}
+		}
+	</script>
+
+
+</body>
+
+</html>
