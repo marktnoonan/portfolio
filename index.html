@@ -18,11 +18,12 @@
 		} */
 
 		section:not(:first-of-type) {
-			border-left: 3px solid rgba(163, 41, 41, 0.3);
+			border-left: 2px solid rgba(163, 41, 41, 0.3);
 		}
 
 		card {
-			background-color: rgb(245, 246, 249);
+			/* background-color: rgb(245, 246, 249); */
+			border: 1px solid rgba(163, 41, 41, 0.3);
 		}
 
 		card>p,
@@ -285,6 +286,7 @@
 
 
 		const sections = Array.from(document.querySelectorAll("section"));
+		const cards = Array.from(document.querySelectorAll("card"));
 
 		function setColor(scrollEvent) {
 			let scrollPosition = window.scrollY;
@@ -292,6 +294,9 @@
 			//h2s.forEach(heading => { heading.style.color = color });
 			sections.forEach(heading => {
 				heading.style.borderLeftColor = color;
+			});
+			cards.forEach(card => {
+				card.style.borderColor = color;
 			});
 		}
 		window.addEventListener('scroll', setColor);
