@@ -1,578 +1,298 @@
-<!DOCTYPE html>
-<html>
+<!doctype HTML>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="People Making Progress" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://peoplemakingprogressinc.org/donate/" />
-	<meta property="og:image" content="https://peoplemakingprogressinc.org/donate/gagives1.jpg" />
-	<meta property="og:video" content="https://www.youtube.com/watch?v=pGDlgwMZZoA" />
-	<title>Donate to People Making Progress this Giving Tuesday</title>
-	<style media="screen">
-		* {
-			box-sizing: border-box;
+	<title>Mark Noonan</title>
+	<meta charset=utf-8>
+	<meta name="description" content="Mark Noonan web development portfolio.">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link href="./BareCSS-v1.1.0/css/bare.min.css" rel="stylesheet">
+	<style>
+		/* card:hover {
+			background: rgb(187, 204, 255);
+			transition: background-color .2s linear;
 		}
 
-		body {
-			font-family: 'Roboto', sans-serif;
-			padding: 0;
-			margin: 0;
-			color: rgba(29, 19, 40, 0.9);
-			height: 100%;
-			background-color: #dcd9e3;
+		card {
+			transition: background-color .6s linear;
+		} */
+
+		section:not(:first-of-type) {
+			border-left: 2px solid rgba(163, 41, 41, 0.3);
 		}
 
-		#twitter-widget-0 {
-			vertical-align: bottom;
+		card {
+			background-color: rgb(245, 246, 249);
 		}
 
-		.bg {
-			background: linear-gradient(to bottom, #533E7F 0%, rgba(0, 0, 0, 0.1) 100%);
-			height: 100vh;
-			width: 100vw;
-			position: fixed;
-			content: "";
+		card>p,
+		card>h3 {
+			text-align: center
 		}
+
 
 		nav {
-			background-color: #533E7F;
-			padding: 4px 0;
-			margin: 0;
-			min-height: 40px;
 			position: fixed;
-			top: 0;
-			text-align: left;
 			width: 100%;
-			height: 50px;
-			z-index: 1000;
-			border-bottom: solid 1px rgba(255, 255, 255, 0.2);
-			vertical-align: middle;
-			box-sizing: border-box;
+			border-bottom: 0 !important;
+			box-shadow: 0 2px 10px -6px rgba(0, 0, 0, 0.4)
 		}
 
-		main {
-			/* background: linear-gradient(to bottom, #533E7F 0%, rgba(255, 255, 255, 1) 100%); */
-			padding-top: 50px;
-			padding: 0;
+		.image-wrapper {
 			text-align: center;
-		}
-
-		b {
-			font-weight: 700;
-		}
-
-		h2 {
-			margin-bottom: 0;
-		}
-
-		h3 {
-			margin-bottom: 6px;
-			margin-top: 2px;
-		}
-
-		p {
-			max-width: 500px;
-			display: inline-block;
-			text-align: left;
-		}
-
-		.effects-container {
-			box-sizing: border-box;
-			position: relative;
-			display: inline-block;
-			text-align: left;
-			text-align: center;
-		}
-
-		.cta {
-			position: fixed;
-			height: 90vh;
-			width: 500px;
-			top: 60px;
-			left: 430px;
+			margin-bottom: 8px;
+			padding: 3px;
 			border-radius: 3px;
-			border: 1px solid rgba(0, 0, 0, 0.4);
-			background-color: #CEB1CC;
+			max-height: 200px;
+			overflow: scroll;
 		}
 
-		.logo {
-			height: 40px;
-		}
-
-		.effects-list {
-			display: inline-block;
-		}
-
-		ul {
-			list-style-type: none;
-			margin-top: 10px;
-			padding: 0;
-			/*max-width: 800px;*/
-			display: table;
-			margin-bottom: 40px;
-		}
-
-		li {
-			margin-bottom: 4px;
-			box-sizing: border-box;
-			position: relative;
-			margin: 1px;
-			display: inline-block;
-			min-width: 290px;
-			padding: 10px 8px;
-			border-radius: 3px;
-			text-align: center;
-			vertical-align: top;
-		}
-
-		.description {
-			display: inline-block;
-			margin: 0;
-			/*opacity: 0.5;*/
-			animation: linear 1s straighten forwards paused;
-			text-align: inherit;
-			font-size: 14px;
-		}
-
-		@keyframes straighten {
-			from {}
-
-			to {
-				transform: rotateZ(0deg);
-				opacity: 1;
-			}
-		}
-
-		.intro {
-			padding: 0;
-			/* background: linear-gradient(to bottom, #533E7F 0%, rgba(255, 255, 255, 1) 100%); */
-			width: 100%;
-			min-height: 100vh;
-			display: block;
-			position: absolute;
-			top: 40px;
-			left: 0;
-			z-index: 900;
-			transition: opacity .2s linear;
-		}
-
-		.intro-title {
-			font-size: 2.4em;
-		}
-
-		.intro-content {
-			position: relative;
-			padding: 40px;
-			display: inline-block;
-			width: 95vw;
-			box-sizing: border-box;
-			padding: 10px;
-			background-color: rgba(255, 255, 255, 0.5);
-			color: inherit;
-			margin-bottom: 100px;
-		}
-
-		.demo {
-			text-align: center;
-			box-sizing: border-box;
-		}
-
-		.demo-container {
-			position: relative;
-		}
-
-		.hidden {
-			opacity: 0;
-			pointer-events: none;
-		}
-
-		.details {
-			display: none
-		}
-
-		.button {
-			display: inline-block;
-			color: rgba(255, 255, 255, 0.9);
-			padding: .5em;
-			border-radius: 4px;
-			border: 0;
-			margin: 10px;
-			background-color: rgba(62, 83, 127, 1);
-			border: 1px solid rgba(0, 0, 0, 0.3);
-			font-family: sans-serif;
-			font-size: .8em;
-			vertical-align: middle;
-		}
-
-		.support {
-			color: rgba(0, 0, 0, 0.8);
-			background-color: #F2BC40;
-			padding: 14px 25px 15px 25px;
-			font-size: 1.2em;
-		}
-
-		.support-mini {
-			color: rgba(0, 0, 0, 0.8);
-			background-color: #F2BC40;
-		}
-
-		select {
-			font-size: 14px;
-		}
-
-		.video {
-			box-sizing: border-box;
-			margin-top: 20px;
-			margin-right: 10px;
-			display: inline-block;
-			width: 380px;
-			min-height: 200px;
-			vertical-align: top;
-		}
-
-		.video-wrapper {
-			position: relative;
-			padding-bottom: 56.25%;
-			padding-top: 35px;
-			height: 0;
-			overflow: hidden;
-			max-width: 100%;
-		}
-
-		.breadcrumb {
-			display: inline-block;
-			cursor: pointer;
-			margin: 2px 2px 0 2px;
-		}
-
-		.effect-content {
-			text-align: left;
-			display: inline-block;
-			min-width: 200px;
-			padding-left: 4px;
-			padding-top: 10px;
-		}
-
-		.effect-image {
-			display: inline-block;
-			vertical-align: top;
-			border-radius: 50%;
-			box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
-			margin: 10px;
-			height: 80px
-		}
-
-		.demo-title {
-			color: rgba(255, 255, 255, 0.9);
-		}
-
-		.intro-text {
-			display: inline-block;
-			color: inherit;
-			margin: 20px 0 0 0;
-		}
-
-		a {
-			text-decoration: none;
-			color: inherit;
-		}
-
-
-
-		.nav-content {
-			color: rgba(255, 255, 255, 0.6);
-			float: right;
-			padding-right: 20px;
-			vertical-align: middle;
-			margin-top: 10px;
-		}
-
-		.nav-content:hover {
-			color: #fff;
-		}
-
-		.footer {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			padding: 1rem;
-			font-size: .8em;
-			padding-top: 60px;
-			text-align: center;
-		}
-
-		.learn-more {
-			vertical-align: top;
-			position: relative;
-			top: 50%;
-			width: 84px;
-			text-align: center;
-			transform: translateY(-50%);
-		}
-
-		.faded {
-			opacity: 0.5;
-		}
-
-		#intro {
-			padding-left: 10px;
-		}
-
-		.details-text {
-			display: inline-block;
-			text-align: left;
-			background-color: rgba(255, 255, 255, 0.5);
-			padding: 2.2em;
-			border-radius: 4px;
-			box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.5);
-		}
-
-		@media screen and (max-width: 786px) {
-			.effect-content {
-				text-align: center;
-				display: inline-block;
-				min-width: 200px;
-				padding-left: 0;
-				padding-top: 0;
-			}
-			.learn-more {
-				position: relative;
-				top: 50%;
-				width: 84px;
-				text-align: center;
-			}
-		}
-
-		@media screen and (max-width: 681px) {
-
-			.learn-more {
-				transform: translateY(0);
-			}
-			.video {
-				width: 310px
-			}
-			.faded {
-				display: none;
-			}
-		}
-
-		@media screen and (max-width: 400px) {
-			.video {
-				width: 280px
-			}
-			#intro {
-				padding-left: 0;
-			}
+		form {
+			margin: 0 auto;
+			max-width: 400px;
 		}
 	</style>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-
 </head>
 
 <body>
-	<div id="fb-root"></div>
-	<script>
-		(function (d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.11';
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
-	<div class="bg"></div>
-	<nav id="top">
-		<img src="./img/PMP_Logo_home.jpg" class="logo" alt="People Making Progress Logo">
-		<div class="nav-content">
-			<a href="https://www.peoplemakingprogressinc.org">Return to Main PMP site &gt;</a>
-		</div>
 
+	<!-- nav -->
+
+	<nav>
+		<!-- use fx attribute for fixed positioning -->
+		<label>
+			<input type="checkbox">
+			<header>
+			</header>
+
+			<ul>
+				<li>
+					<a href="#skills">Skills</a>
+				</li>
+				<li>
+					<a href="#projects">Projects</a>
+				</li>
+				<li>
+					<a href="#bio">Bio</a>
+				</li>
+				<li>
+					<a href="#contact">Contact</a>
+				</li>
+
+				<!-- <li>
+					<a>Contact</a>
+					<menu>
+						<menuitem>
+						<a href="#three">Email markthomasnoonan@gmail.com</a>
+						</menuitem>
+						<menuitem>
+						<a href="#four">Twitter @marktnoonan</a>
+						</menuitem>
+						<menuitem>
+						<a href="#five">Contact Form</a>
+						</menuitem>
+					</menu>
+				</li> -->
+			</ul>
+		</label>
 	</nav>
 
-	<main>
-		<section class="intro">
-			<div class="intro-content">
-				<div class="video">
-					<div id="iframe-wrapper" class="video-wrapper">
-						<iframe id="youtube-vids" src="https://www.youtube.com/embed/pGDlgwMZZoA?modestbranding=1" frameborder="0" allowfullscreen=""
-						 style="position: absolute; top:0; left: 0; width: 100%; height: 100%;"></iframe>
+	<!-- standard section for content -->
+
+	<section>
+		<br>
+		<br>
+		<h1>Mark Noonan</h1>
+
+		<p>I'm a web developer from Ireland now based in Atlanta, Georgia. I like solving real-world problems in fun and approachable
+			ways.
+		</p>
+	</section>
+	<hr id="skills">
+	<section>
+		<h2>Skills</h2>
+
+		<span fs="l">
+			<b>Front End</b>: HTML, CSS, JavaScript, Vue, Vuetify, Responsive Design, Accessibilty</span>
+		<ul ma="0">
+			<li>Have created websites and single-page apps with (and without) external libraries/frameworks</li>
+			<li>Have published a small open source helper library for rendering HTML from JavaScript objects</li>
+		</ul>
+		<div>
+			<span fs="l">
+				<b>Back End</b>: Firebase (Auth, Database, Cloud Functions), PHP, Node</span>
+			<ul ma="0">
+				<li>Have used PHP for web scraping, and to generate emails and trigger responses to incoming emails/texts</li>
+				<li>Mostly used Node in context of cloud functions to manage link between Firebase and Google Sheets API</li>
+			</ul>
+		</div>
+		<div>
+			<span fs="l">
+				<b>Tools</b>: Git, GitHub, NPM, Parcel, Netlify
+			</span>
+			<ul ma="0">
+				<li>I run some projects with multiple contributors on GitHub and have helped on-board newcomers</li>
+				<li>I have some projects that auto-deploy a fresh build to Netlify from their GitHub master branches after changes are committed,
+					which really helped me get all these skills working together.</li>
+			</ul>
+		</div>
+		<div>
+			<span fs="l">
+				<b>Other Skills</b>: Communication, teaching, presenting, leadership, community involvement</span>
+			<ul ma="0">
+				<li>Co-organizer at Code for Atlanta</li>
+				<li>Led a project from a hackathon to win first prize and $40,000 at AT&T's Civic Coding Challenge one year later
+				</li>
+				<li>Built a relationship with MARTA and ran a pilot of an alternative user interface for their paratransit service
+				</li>
+				<li>Have given talks around Atlanta about civic hacking and my own projects. In October 2018 I will be presenting at Connect.Tech
+					about optimizing user interfaces for cognitive accessbility.
+				</li>
+			</ul>
+		</div>
+	</section>
+	<hr id="projects">
+	<section>
+		<h2>Projects</h2>
+
+		<grid>
+			<div col="1/3">
+
+				<card>
+					<h3>
+						<a href="https://www.folkmusic.com" target="_new">Folkmusic.com</a>
+					</h3>
+					<div class="image-wrapper">
+						<img src="./images/John McCutcheon - Home (2018-07-01 20-12-09).png" alt="">
 					</div>
-				</div>
-				<div class="intro-text">
-					<h2>Donate to People Making Progress</h2>
-					<p id="intro">
-						PMP is a non-profit that provides services through a combination of government funding and private donors. The generosity
-						of our donors empowers us to go beyond what can be accomplished with government funding alone and strive to provide
-						a truly excellent experience for the people we serve. This leads to value beyond the lives of these individuals, and
-						benefits for local businesses and the community in general. We believe this combination of effects is well worth your
-						investment.
+					<p>A website for GRAMMY-nominated folksinger John McCutcheon.</p>
+					<b>My contribution:</b>
+					<ul ma="0" fs="s">
+						<li>Solo freelance project</li>
+						<li>Created lyrics search feature (JS, HTML)</li>
+						<li>Created concert calendar and map generated from a Google Sheet (JS, HTML, CSS, MapsForUs, Tabletop.js)</li>
+						<li>Created responsive vertical news ticker (CSS, JS)</li>
+						<li>Created gallery for YouTube videos (JS, CSS, HTML)</li>
+					</ul>
 					</p>
-					<br>
-				</div>
-				<br>
-				<br> Choose a donation amount:
-				<select id="donation-amount" onChange="setDonationLevel(this.value)">
-					<option value="5">$5</option>
-					<option value="20" selected>$20</option>
-					<option value="50">$50</option>
-					<option value="100">$100</option>
-					<option value="">Custom</option>
-				</select>
-				<br>
-				<a class="button support" href="https://www.gagives.org/c/GGD/a/peoplemakingprogressinc/donate/?t=20" id="donation-link">
-					Donate Now ➠</a>
-				<br>
-				<div class="social-wrapper">
-					<div class="fb-share-button" data-href="https://peoplemakingprogressinc.org/donate/" data-layout="button" data-size="large"
-					 data-mobile-iframe="true">
-						<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpeoplemakingprogressinc.org%2Fdonate%2F&amp;src=sdkpreparse">Share</a>
-					</div>
-					<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a>
-				</div>
-
-
-
-				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				<hr>
-				<h2>What Your Donation Can Do</h2>
-
-				<div class="demo-container">
-					<br>
-					<div class="effects-container" id="effects-container">
-						<div id="effects-list" class="effects-list">
-							<ul>
-								<li id="0">
-									<img src="./img/0.png" class="effect-image">
-									<div class="effect-content">
-										<h3>Supported Employment</h3>
-										<p class="description">Your donation will help people with developmental disabilities find jobs, and receive the individualized
-											<b>ongoing support, skills training, and onsite coaching</b> needed to succeed in a position for the long term.
-											<span class="description details" id="se">
-												<br>
-												<span class="details-text">
-													In 1996 a new Hotel was opening in midtown Atlanta. PMP approached hotel management with a proposal to staff the dish room
-													with persons with disabilities. The concept of supported employment was explained to the management team with
-													the understanding that a PMP job coach would support the utility crew throughout their shifts in the dish room.
-													<br>
-													<br>Despite some misgivings especially considering that the entire complex would be undergoing the inevitable start
-													up problems of any business, management gave PMP a chance and hired several persons with developmental disabilities
-													as employees. The Hotel had its Grand Opening early the next year with the PMP utility crew manning the dish
-													room. All these years later it is a relationship that works.
-													<br>
-													<br>The People Making Progress consumers, who are supported by hotel management and co-workers alike, keep the dish
-													room functioning and are an integral part of the operation and culture that provides Five Star Service to visitors
-													to Atlanta.
-												</span>
-											</span>
-										</p>
-										<a id="learnse" href="#detail=se" class="button learn-more" onclick="document.getElementById('se').style.display='inline-block'; this.classList.add('faded')">Learn More</a>
-									</div>
-								</li>
-								<li id="1">
-									<img src="./img/2.png" class="effect-image">
-									<div class="effect-content">
-										<h3>Community Living Support</h3>
-										<p class="description">Your donation will help fund
-											<b>wider access to activities, classes, and trainings</b> that are of interest to each individual. Whether competing
-											in athletic events, or learning topics such as sign language, nutrition, and music, donations make it possible
-											to do more.
-											<span class="description details" id="cls">
-												<br>
-												<span class="details-text">
-													After Mark finished high school, he and his Dad were inseparable; their whole world revolving solely around each other. Then
-													Mark’s Dad died and Mark was lost. Mark’s siblings approached our founder Dorothy Miller to see if perhaps PMP
-													could help fill some of the void in Mark’s life. Each sibling would have happily taken Mark into their home
-													to live, but was that what was best for Mark? They had heard of Dorothy Miller and her vision of community living
-													for persons with developmental disabilities. Could Mark be part of that vision?
-													<br>
-													<br>Mark, his siblings and Dorothy put their heads together and within six months Mark had purchased his own condominium,
-													was living on his own with individualized support, and had begun to form his own circle of friends. On the day
-													Mark took the key and opened his own front door he said “I wish Dad could see me now.”
-												</span>
-											</span>
-										</p>
-										<a id="learncls" href="#detail=cls" class="button learn-more" onclick="document.getElementById('cls').style.display='inline-block'; this.classList.add('faded')">Learn More</a>
-									</div>
-								</li>
-								<br>
-								<li id="2">
-									<img src="./img/1.png" class="effect-image">
-									<div class="effect-content">
-										<h3>Community Access</h3>
-										<p class="description">Your donation will help people with developmental disabilities
-											<b>participate in and contribute to their local community</b>. PMP participants provide thousands of hours of volunteer
-											service to Atlanta-area nonprofits annually, and been recognized with awards both locally and nationally.
-											<span class="description details" id="cag">
-												<br>
-												<span class="details-text">
-													People Making Progress had helped Jennifer secure a job before she graduated from high school. Unfortunately, due to the
-													economy and her increasing medical needs, Jennifer was no longer able to retain employment. Jennifer and her
-													family began exploring options.
-													<br>
-													<br>Jennifer said that she wanted to spend time with her friends doing fun things such as going out to eat or to
-													the movies. Jennifer’s parents did not want her to sit at home, continue to struggle and face disappointment
-													with not finding a job or to lose her work skills.
-													<br>
-													<br>In 2004, Jennifer joined her friends and PMP in designing a community support program. PMP consumers have fun
-													exploring their community and maintain job skills by providing much needed regular weekly volunteer service
-													to other non-profits. In 2010, PMP was named the Civic Group of the Year by the Atlanta Community Food Bank
-													and received the President’s Volunteer Service Award.
-												</span>
-											</span>
-										</p>
-										<a id="learncag" href="#detail=cag" class="button learn-more" onclick="document.getElementById('cag').style.display='inline-block'; this.classList.add('faded')">Learn More</a>
-									</div>
-								</li>
-								<li id="3">
-									<img src="./img/3.png" class="effect-image">
-									<div class="effect-content">
-										<h3>Employee Retention</h3>
-										<p class="description">Your donation will help people with developmental disabilities maintain
-											<b>long term relationships</b> with the people they like, by helping us compensate employees fairly and provide jobs
-											that can grow with them over a lifetime of work.
-											<span class="description details" id="er">
-												<br>
-												<span class="details-text">
-													Great employees are the heart of any organization, and turnover is a problem for all nonprofits. Many of our employees have
-													worked with us for years, allowing relationships to flourish between them and the people we serve.
-												</span>
-											</span>
-										</p>
-										<a id="learner" href="#detail=er" class="button learn-more" onclick="document.getElementById('er').style.display='inline-block'; this.classList.add('faded')">Learn More</a>
-									</div>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</div>
+				</card>
 			</div>
-			<footer class="footer">
-				<hr> People Making Progress
-				<br> 2345 Fourth Street Suite 100
-				<br> Tucker, Georgia 30084
-				<br> Phone: 770.723.1848
-			</footer>
+
+			<div col="1/3">
+				<card>
+					<h3>Free Live Transcript</h3>
+					<div class="image-wrapper">
+						<img src="./images/Live Transcript (2018-07-01 20-19-28).png" alt="">
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua.
+					</p>
+				</card>
+			</div>
+
+			<div col="1/3">
+				<card>
+					<h3>Paratransit Pal</h3>
+					<div class="image-wrapper">
+						<img src="./images/paratransit pal.png" alt="">
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua.
+					</p>
+				</card>
+			</div>
+			<div col="1/3">
+				<card>
+					<h3>Loosely Goosed HTML Template</h3>
+					<div class="image-wrapper">
+						<img src="./images/lght.png" alt="">
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua.
+					</p>
+				</card>
+			</div>
+
+			<div col="1/3">
+				<card>
+					<h3>Folkmusic Dashboard</h3>
+					<div class="image-wrapper">
+						<img src="./images/fm-dash.png" alt="">
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua.
+					</p>
+				</card>
+			</div>
+
+			<div col="1/3">
+				<card>
+					<h3>Mobility ETA</h3>
+					<div class="image-wrapper">
+						<img src="./images/mobeta.png" alt="">
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua.
+					</p>
+				</card>
+			</div>
+		</grid>
+	</section>
+	<hr id="bio">
+	<section>
+		<h2>Bio</h2>
+
+		<p>
+			I work as a Progam Developer at People Making Progress, managing programs that support adults with developmental disabilities
+			at home and in their jobs. At PMP I also create internal web-based tools for our management team, and public-facing web
+			pages as needed. When I'm not at PMP, I work at Appalseed Productions as an office manager and the web developer for Folkmusic.com.
+		</p>
+		<p>
+			In 2018 I volunteered to become a co-organizer with Code for Atlanta (a Code for America Bridage), after starting a civic
+			hacking project with them at a hackathon in 2016. I'm also active in Atlanta's freeCodeCamp community and helped introduce
+			and encourage many newer developers to build their skills.
+		</p>
+		<p>
+			I have a BA in Music and English, and an MA in Ethnomusicology.
+		</p>
+
+	</section>
+	<hr id="contact">
+	<section>
+		<h2>
+			Contact
+		</h2>
+		<form id="contact">
+			<label for="name">
+				Name
+				<input name="name" type="text">
+			</label>
+			<label for="email">
+				Email Address
+				<input name="email" type="text">
+			</label>
+			<label for="comment">
+				comment
+				<textarea name="comment" id="" cols="30" rows="10"></textarea>
+			</label>
+			<button>Submit</button>
+		</form>
+	</section>
+	<script>
 
 
-		</section>
+		const sections = Array.from(document.querySelectorAll("section"));
 
-	</main>
-
-	<script type="text/javascript">
-		function setDonationLevel(amount) {
-			var donationLink = document.getElementById('donation-link');
-			if (amount !== "") {
-				donationLink.href = "https://www.gagives.org/c/GGD/a/peoplemakingprogressinc/donate/?t=" + amount;
-			}
+		function setColor(scrollEvent) {
+			let scrollPosition = window.scrollY;
+			let color = `hsla(${(scrollPosition % 360).toString().substr(0, 3)},60%,40%, 0.4)`
+			//h2s.forEach(heading => { heading.style.color = color });
+			sections.forEach(heading => {
+				heading.style.borderLeftColor = color;
+			});
 		}
+		window.addEventListener('scroll', setColor);
 	</script>
-
-
 </body>
 
 </html>
