@@ -17,6 +17,10 @@
 			transition: background-color .6s linear;
 		} */
 
+		main {
+			padding-left: 3px;
+		}
+
 		section:not(:first-of-type) {
 			border-left: 2px solid rgba(163, 41, 41, 0.3);
 		}
@@ -98,186 +102,189 @@
 	</nav>
 
 	<!-- standard section for content -->
+	<main>
+		<section>
+			<br>
+			<br>
+			<h1>Mark Noonan</h1>
 
-	<section>
-		<br>
-		<br>
-		<h1>Mark Noonan</h1>
+			<p>I'm a web developer from Ireland now based in Atlanta, Georgia. I like solving real-world problems in fun and approachable
+				ways.
+			</p>
+		</section>
+		<hr id="skills">
+		<section>
+			<h2>Skills</h2>
 
-		<p>I'm a web developer from Ireland now based in Atlanta, Georgia. I like solving real-world problems in fun and approachable
-			ways.
-		</p>
-	</section>
-	<hr id="skills">
-	<section>
-		<h2>Skills</h2>
-
-		<span fs="l">
-			<b>Front End</b>: HTML, CSS, JavaScript, Vue, Vuetify, Responsive Design, Accessibilty</span>
-		<ul ma="0">
-			<li>Have created websites and single-page apps with (and without) external libraries/frameworks</li>
-			<li>Have published a small open source helper library for rendering HTML from JavaScript objects</li>
-		</ul>
-		<div>
 			<span fs="l">
-				<b>Back End</b>: Firebase (Auth, Database, Cloud Functions), PHP, Node</span>
+				<b>Front End</b>: HTML, CSS, JavaScript, Vue, Vuetify, Responsive Design, Accessibilty</span>
 			<ul ma="0">
-				<li>Have used PHP for web scraping, and to generate emails and trigger responses to incoming emails/texts</li>
-				<li>Mostly used Node in context of cloud functions to manage link between Firebase and Google Sheets API</li>
+				<li>Have created websites and single-page apps with (and without) external libraries/frameworks</li>
+				<li>Have published a small open source helper library for rendering HTML from JavaScript objects</li>
 			</ul>
-		</div>
-		<div>
-			<span fs="l">
-				<b>Tools</b>: Git, GitHub, NPM, Parcel, Netlify
-			</span>
-			<ul ma="0">
-				<li>I run some projects with multiple contributors on GitHub and have helped on-board newcomers</li>
-				<li>I have some projects that auto-deploy a fresh build to Netlify from their GitHub master branches after changes are committed,
-					which really helped me get all these skills working together.</li>
-			</ul>
-		</div>
-		<div>
-			<span fs="l">
-				<b>Other Skills</b>: Communication, teaching, presenting, leadership, community involvement</span>
-			<ul ma="0">
-				<li>Co-organizer at Code for Atlanta</li>
-				<li>Led a project from a hackathon to win first prize and $40,000 at AT&T's Civic Coding Challenge one year later
-				</li>
-				<li>Built a relationship with MARTA and ran a pilot of an alternative user interface for their paratransit service
-				</li>
-				<li>Have given talks around Atlanta about civic hacking and my own projects. In October 2018 I will be presenting at Connect.Tech
-					about optimizing user interfaces for cognitive accessbility.
-				</li>
-			</ul>
-		</div>
-	</section>
-	<hr id="projects">
-	<section>
-		<h2>Projects</h2>
-
-		<grid>
-			<div col="1/3">
-
-				<card>
-					<h3>
-						<a href="https://www.folkmusic.com" target="_new">Folkmusic.com</a>
-					</h3>
-					<div class="image-wrapper">
-						<img src="./images/John McCutcheon - Home (2018-07-01 20-12-09).png" alt="">
-					</div>
-					<p>A website for GRAMMY-nominated folksinger John McCutcheon.</p>
-					<b>My contribution:</b>
-					<ul ma="0" fs="s">
-						<li>Solo freelance project</li>
-						<li>Created lyrics search feature (JS, HTML)</li>
-						<li>Created concert calendar and map generated from a Google Sheet (JS, HTML, CSS, MapsForUs, Tabletop.js)</li>
-						<li>Created responsive vertical news ticker (CSS, JS)</li>
-						<li>Created gallery for YouTube videos (JS, CSS, HTML)</li>
-					</ul>
-					</p>
-				</card>
+			<div>
+				<span fs="l">
+					<b>Back End</b>: Firebase (Auth, Database, Cloud Functions), PHP, Node</span>
+				<ul ma="0">
+					<li>Have used PHP for web scraping, and to generate emails and trigger responses to incoming emails/texts</li>
+					<li>Mostly used Node in context of cloud functions to manage link between Firebase and Google Sheets API</li>
+				</ul>
 			</div>
-
-			<div col="1/3">
-				<card>
-					<h3>Free Live Transcript</h3>
-					<div class="image-wrapper">
-						<img src="./images/Live Transcript (2018-07-01 20-19-28).png" alt="">
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-				</card>
+			<div>
+				<span fs="l">
+					<b>Tools</b>: Git, GitHub, NPM, Parcel, Netlify
+				</span>
+				<ul ma="0">
+					<li>I run some projects with multiple contributors on GitHub and have helped on-board newcomers</li>
+					<li>I have some projects that auto-deploy a fresh build to Netlify from their GitHub master branches after changes are committed,
+						which really helped me get all these skills working together.</li>
+				</ul>
 			</div>
-
-			<div col="1/3">
-				<card>
-					<h3>Paratransit Pal</h3>
-					<div class="image-wrapper">
-						<img src="./images/paratransit pal.png" alt="">
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-				</card>
+			<div>
+				<span fs="l">
+					<b>Other Skills</b>: Communication, teaching, presenting, leadership, community involvement</span>
+				<ul ma="0">
+					<li>Co-organizer at Code for Atlanta</li>
+					<li>Led a project from a hackathon to win first prize and $40,000 at AT&T's Civic Coding Challenge one year later
+					</li>
+					<li>Built a relationship with MARTA and ran a pilot of an alternative user interface for their paratransit service
+					</li>
+					<li>Have given talks around Atlanta about civic hacking and my own projects. In October 2018 I will be presenting at Connect.Tech
+						about optimizing user interfaces for cognitive accessbility.
+					</li>
+				</ul>
 			</div>
-			<div col="1/3">
-				<card>
-					<h3>Loosely Goosed HTML Template</h3>
-					<div class="image-wrapper">
-						<img src="./images/lght.png" alt="">
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-				</card>
-			</div>
+		</section>
+		<hr id="projects">
+		<section>
+			<h2>Projects</h2>
 
-			<div col="1/3">
-				<card>
-					<h3>Folkmusic Dashboard</h3>
-					<div class="image-wrapper">
-						<img src="./images/fm-dash.png" alt="">
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-				</card>
-			</div>
+			<grid>
+				<div col="1/3">
 
-			<div col="1/3">
-				<card>
-					<h3>Mobility ETA</h3>
-					<div class="image-wrapper">
-						<img src="./images/mobeta.png" alt="">
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.
-					</p>
-				</card>
-			</div>
-		</grid>
-	</section>
-	<hr id="bio">
-	<section>
-		<h2>Bio</h2>
+					<card>
+						<h3>
+							<a href="https://www.folkmusic.com" target="_new">Folkmusic.com</a>
+						</h3>
+						<div class="image-wrapper">
+							<img src="./images/John McCutcheon - Home (2018-07-01 20-12-09).png" alt="">
+						</div>
+						<p>A website for GRAMMY-nominated folksinger John McCutcheon.</p>
+						<b>My contribution:</b>
+						<ul ma="0" fs="s">
+							<li>Solo freelance project</li>
+							<li>Created lyrics search feature (JS, HTML)</li>
+							<li>Created concert calendar and map generated from a Google Sheet (JS, HTML, CSS, MapsForUs, Tabletop.js)</li>
+							<li>Created responsive vertical news ticker (CSS, JS)</li>
+							<li>Created gallery for YouTube videos (JS, CSS, HTML)</li>
+						</ul>
+						</p>
+					</card>
+				</div>
 
-		<p>
-			I work as a Progam Developer at People Making Progress, managing programs that support adults with developmental disabilities
-			at home and in their jobs. At PMP I also create internal web-based tools for our management team, and public-facing web
-			pages as needed. When I'm not at PMP, I work at Appalseed Productions as an office manager and the web developer for Folkmusic.com.
-		</p>
-		<p>
-			In 2018 I volunteered to become a co-organizer with Code for Atlanta (a Code for America Bridage), after starting a civic
-			hacking project with them at a hackathon in 2016. I'm also active in Atlanta's freeCodeCamp community and helped introduce
-			and encourage many newer developers to build their skills.
-		</p>
-		<p>
-			I have a BA in Music and English, and an MA in Ethnomusicology.
-		</p>
+				<div col="1/3">
+					<card>
+						<h3>Free Live Transcript</h3>
+						<div class="image-wrapper">
+							<img src="./images/Live Transcript (2018-07-01 20-19-28).png" alt="">
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua.
+						</p>
+					</card>
+				</div>
 
-	</section>
-	<hr id="contact">
-	<section>
-		<h2>
-			Contact
-		</h2>
-		<form id="contact">
-			<label for="name">
-				Name
-				<input name="name" type="text">
-			</label>
-			<label for="email">
-				Email Address
-				<input name="email" type="text">
-			</label>
-			<label for="comment">
-				comment
-				<textarea name="comment" id="" cols="30" rows="10"></textarea>
-			</label>
-			<button>Submit</button>
-		</form>
-	</section>
+				<div col="1/3">
+					<card>
+						<h3>Paratransit Pal</h3>
+						<div class="image-wrapper">
+							<img src="./images/paratransit pal.png" alt="">
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua.
+						</p>
+					</card>
+				</div>
+				<div col="1/3">
+					<card>
+						<h3>Loosely Goosed HTML Template</h3>
+						<div class="image-wrapper">
+							<img src="./images/lght.png" alt="">
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua.
+						</p>
+					</card>
+				</div>
+
+				<div col="1/3">
+					<card>
+						<h3>Folkmusic Dashboard</h3>
+						<div class="image-wrapper">
+							<img src="./images/fm-dash.png" alt="">
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua.
+						</p>
+					</card>
+				</div>
+
+				<div col="1/3">
+					<card>
+						<h3>Mobility ETA</h3>
+						<div class="image-wrapper">
+							<img src="./images/mobeta.png" alt="">
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua.
+						</p>
+					</card>
+				</div>
+			</grid>
+		</section>
+		<hr id="bio">
+		<section>
+			<h2>Bio</h2>
+
+			<p>
+				I work as a Progam Developer at People Making Progress, managing programs that support adults with developmental disabilities
+				at home and in their jobs. At PMP I also create internal web-based tools for our management team, and public-facing web
+				pages as needed. When I'm not at PMP, I work at Appalseed Productions as an office manager and the web developer for
+				Folkmusic.com.
+			</p>
+			<p>
+				In 2018 I volunteered to become a co-organizer with Code for Atlanta (a Code for America Bridage), after starting a civic
+				hacking project with them at a hackathon in 2016. I'm also active in Atlanta's freeCodeCamp community and helped introduce
+				and encourage many newer developers to build their skills.
+			</p>
+			<p>
+				I have a BA in Music and English, and an MA in Ethnomusicology.
+			</p>
+
+		</section>
+		<hr id="contact">
+		<section>
+			<h2>
+				Contact
+			</h2>
+			<form id="contact">
+				<label for="name">
+					Name
+					<input name="name" type="text">
+				</label>
+				<label for="email">
+					Email Address
+					<input name="email" type="text">
+				</label>
+				<label for="comment">
+					comment
+					<textarea name="comment" id="" cols="30" rows="10"></textarea>
+				</label>
+				<button>Submit</button>
+			</form>
+		</section>
+	</main>
+
 	<script>
 
 
