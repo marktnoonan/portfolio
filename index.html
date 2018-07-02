@@ -22,7 +22,7 @@
 		}
 
 		card {
-			border-left: 2px solid rgba(163, 41, 41, 0.3);
+			background-color: rgb(252, 252, 252);
 		}
 
 		card>p,
@@ -283,20 +283,15 @@
 
 	<script>
 
-
 		const sections = Array.from(document.querySelectorAll("section"));
-		const cards = Array.from(document.querySelectorAll("card"));
 
 		function setColor(scrollEvent) {
 			let scrollPosition = window.scrollY;
-			let color = `hsla(${(scrollPosition % 360).toString().substr(0, 3)},60%,40%, 0.4)`
-			//h2s.forEach(heading => { heading.style.color = color });
+			let color = `hsla(${(scrollPosition / 3 % 360).toString().substr(0, 3)},60%,40%, 0.4)`
 			sections.forEach(heading => {
 				heading.style.borderLeftColor = color;
 			});
-			cards.forEach(card => {
-				card.style.borderLeftColor = color;
-			});
+
 		}
 		window.addEventListener('scroll', setColor);
 	</script>
