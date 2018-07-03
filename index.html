@@ -51,6 +51,38 @@
 			margin: 0 auto;
 			max-width: 400px;
 		}
+
+		.heading-inside-text,
+		p {
+			display: inline-block;
+			transform: scale(1) skewX(0) skewY(0);
+			transition: all .5s ease-out;
+		}
+
+		.will-shrink {
+			transform: scale(0) skewX(20deg) skewY(10deg);
+			transform-origin: 0 -50%;
+			opacity: 0.0;
+			transition: all 1s ease-out;
+		}
+
+		.will-show {
+			opacity: 1;
+			transition: all .5s ease-in-out;
+			transition-delay: .2s;
+		}
+
+		header>a {
+			opacity: 0;
+			color: #2D3539;
+			transition: all .5s ease-in-out;
+			text-transform: none;
+		}
+
+		input,
+		textarea {
+			box-shadow: 0 0 0 1px rgba(22, 93, 14, 0.5)
+		}
 	</style>
 </head>
 
@@ -63,6 +95,8 @@
 		<label>
 			<input type="checkbox">
 			<header>
+				<a href="#">
+					Mark Thomas Noonan</a>
 			</header>
 
 			<ul>
@@ -102,7 +136,9 @@
 		<section>
 			<br>
 			<br>
-			<h1>Mark Noonan</h1>
+			<h1>
+				<span class="heading-inside-text">Mark Thomas Noonan</span>
+			</h1>
 
 			<p>I'm a web developer from Ireland now based in Atlanta, Georgia. I like solving real-world problems in fun and approachable
 				ways.
@@ -287,6 +323,16 @@
 
 		function setColor(scrollEvent) {
 			let scrollPosition = window.scrollY;
+			let fancyElement = document.querySelector(".heading-inside-text");
+			let headerLink = document.querySelector("header > a");
+			if (scrollPosition > 20) {
+				if (!fancyElement.classList.contains("will-shrink"))
+					fancyElement.classList.add("will-shrink")
+				headerLink.classList.add("will-show")
+			} else {
+				fancyElement.classList.remove("will-shrink")
+				headerLink.classList.remove("will-show")
+			}
 			let color = `hsla(${(scrollPosition / 3 % 360).toString().substr(0, 3)},60%,40%, 0.4)`
 			sections.forEach(heading => {
 				heading.style.borderLeftColor = color;
