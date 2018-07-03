@@ -327,12 +327,14 @@
 					</card>
 				</div>
 			</grid>
+			<br>
+			<Br>
 			<h3>
 				Other Projects
 			</h3>
 			<p>
 				I have a few bits and pieces on
-				<a href="http://codepen.io/marktnoonan/" att>CodePen</a>, and some old creative projects on
+				<a href="https://codepen.io/marktnoonan/" att>CodePen</a>, and some old creative projects on
 				<a href="http://poetryapparatus.com/memorylane.htm" att>Poetry Apparatus</a>.
 			</p>
 		</section>
@@ -361,7 +363,7 @@
 			<h2>
 				Contact
 			</h2>
-			<form id="contact">
+			<form id="contact" netlify>
 				<label for="name">
 					Name
 					<input name="name" type="text">
@@ -402,7 +404,7 @@
 		// sets color based on scroll position
 		function setColor(scrollEvent) {
 			const scrollPosition = window.scrollY;
-			if (scrollPosition > 20) {
+			if (scrollPosition > 14) {
 				if (!fancyElement.classList.contains("will-shrink"))
 					fancyElement.classList.add("will-shrink")
 				headerLink.classList.add("will-show")
