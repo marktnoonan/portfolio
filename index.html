@@ -22,7 +22,7 @@
 		}
 
 		section:first-of-type {
-			background: linear-gradient(90deg, rgb(255, 255, 255) 84%, rgba(0, 0, 0, 0) 64%);
+			background: linear-gradient(-199deg, rgb(255, 255, 255) 88%, rgba(0, 0, 0, 0) 88%, rgb(255, 255, 255) 91%, rgba(0, 0, 0, 0) 95%, rgb(255, 255, 255) 94%);
 			border: 15px solid #fff;
 			padding: 1rem;
 		}
@@ -157,7 +157,7 @@
 				<span class="heading-inside-text">Mark Noonan</span>
 			</h1>
 
-			<p fs="l">Web developer from Ireland now based in Atlanta, Georgia.
+			<p fs="l">Web developer from Ireland, now based in Atlanta, Georgia.
 			</p>
 		</section>
 		<hr id="skills">
@@ -382,12 +382,15 @@
 	</main>
 
 	<script>
-		let color = ''
+		let color = '#DF9FA2'
 		const sections = Array.from(document.querySelectorAll("section:not(:first-of-type)"));
 		const fancyElement = document.querySelector(".heading-inside-text");
 		const headerLink = document.querySelector("header > a");
 		const headerLinks = Array.from(document.querySelectorAll("nav a"));
 		const firstSection = document.querySelector("section")
+
+		firstSection.style.backgroundColor = color;
+
 
 		// overwrites hover styles
 		headerLinks.forEach(link => {
