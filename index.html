@@ -21,13 +21,28 @@
 			border-left: 2px solid rgba(163, 41, 41, 0.3);
 		}
 
-		card {
-			background-color: rgb(252, 252, 252);
+		section:first-of-type {
+			background: linear-gradient(90deg, rgb(255, 255, 255) 84%, rgba(0, 0, 0, 0) 64%);
+			border: 15px solid #fff;
+			padding: 1rem;
 		}
+
+		/* card {
+			background-color: rgb(252, 252, 252);
+		} */
 
 		card>p,
 		card>h3 {
 			text-align: center
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		header>a,
+			{
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 		}
 
 
@@ -41,8 +56,8 @@
 		.image-wrapper {
 			text-align: center;
 			margin-bottom: 8px;
-			padding: 3px;
-			border-radius: 3px;
+			padding: 0;
+			border: 2px solid gainsboro;
 			max-height: 200px;
 			overflow: scroll;
 		}
@@ -70,6 +85,7 @@
 			opacity: 1;
 			transition: all .5s ease-in-out;
 			transition-delay: .2s;
+			pointer-events: all;
 		}
 
 		header>a {
@@ -77,6 +93,7 @@
 			color: #2D3539;
 			transition: all .5s ease-in-out;
 			text-transform: none;
+			pointer-events: none;
 		}
 
 		input,
@@ -96,7 +113,7 @@
 			<input type="checkbox">
 			<header>
 				<a href="#">
-					Mark Thomas Noonan</a>
+					Mark Noonan</a>
 			</header>
 
 			<ul>
@@ -137,11 +154,10 @@
 			<br>
 			<br>
 			<h1>
-				<span class="heading-inside-text">Mark Thomas Noonan</span>
+				<span class="heading-inside-text">Mark Noonan</span>
 			</h1>
 
-			<p>I'm a web developer from Ireland now based in Atlanta, Georgia. I like solving real-world problems in fun and approachable
-				ways.
+			<p fs="l">Web developer from Ireland now based in Atlanta, Georgia.
 			</p>
 		</section>
 		<hr id="skills">
@@ -181,8 +197,9 @@
 					</li>
 					<li>Built a relationship with MARTA and ran a pilot of an alternative user interface for their paratransit service
 					</li>
-					<li>Have given talks around Atlanta about civic hacking and my own projects. In October 2018 I will be presenting at Connect.Tech
-						about optimizing user interfaces for cognitive accessbility.
+					<li>Have given talks around Atlanta about civic hacking and my own projects </li>
+					<li>In October 2018 I will be presenting a 50-minute session at the Connect.Tech conference about optimizing user interfaces
+						for cognitive accessbility
 					</li>
 				</ul>
 			</div>
@@ -192,7 +209,7 @@
 			<h2>Projects</h2>
 
 			<grid>
-				<div col="1/3">
+				<div col="1/2">
 
 					<card>
 						<h3>
@@ -209,70 +226,117 @@
 							<li>Created concert calendar and map generated from a Google Sheet (JS, HTML, CSS, MapsForUs, Tabletop.js)</li>
 							<li>Created responsive vertical news ticker (CSS, JS)</li>
 							<li>Created gallery for YouTube videos (JS, CSS, HTML)</li>
+							<li>Added the above to a customized Weebly template to leverage Weebly's website management and editing tools for client's
+								convenience
+							</li>
 						</ul>
 						</p>
 					</card>
 				</div>
 
-				<div col="1/3">
+				<div col="1/2">
 					<card>
 						<h3>Free Live Transcript</h3>
 						<div class="image-wrapper">
 							<img src="./images/Live Transcript (2018-07-01 20-19-28).png" alt="">
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-							aliqua.
+						<p>Real-time, editable speech transcript (open source project)</p>
+						<b>My contribution:</b>
+						<ul ma="0" fs="s">
+							<li>Project leader & developer</li>
+							<li>Built out prototype with all basic functionality (JS, HTML, CSS, Firebase, Web Speech Recognition API)</li>
+							<li>Led working groups at civic hack nights to get contributions and feedback from others</li>
+							<li>Explained project to other developers so they could contribute</li>
+						</ul>
 						</p>
 					</card>
 				</div>
 
-				<div col="1/3">
+				<div col="1/2">
 					<card>
 						<h3>Paratransit Pal</h3>
 						<div class="image-wrapper">
 							<img src="./images/paratransit pal.png" alt="">
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-							aliqua.
+						<p>Web app for paratransit customers (team project)</p>
+						<br>
+
+						<b>My contribution:</b>
+						<ul ma="0" fs="s">
+							<li>Project leader & front-end developer</li>
+							<li>Contributed to many areas of the front-end (JS, HTML, CSS)</li>
+							<li>Developed and led our group pitch at AT&Ts Civic Coding Challenge</li>
+							<li>Used my experience working with people with disabilities to inform the design and functionality of the app</li>
+							<li>We donated or first-place prize of $40,000 to nonprofits helping people with disabilities or doing programmin education</li>
+						</ul>
 						</p>
 					</card>
 				</div>
-				<div col="1/3">
+				<div col="1/2">
 					<card>
 						<h3>Loosely Goosed HTML Template</h3>
 						<div class="image-wrapper">
 							<img src="./images/lght.png" alt="">
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-							aliqua.
+						<p>JavaScript template-processing library (open source project)</p>
+						<b>My contribution:</b>
+						<ul ma="0" fs="s">
+							<li>Solo project</li>
+							<li>Created function to populate HTML templates and add the result to a web page</li>
+							<li>Created documentation, demo, tests, and instruction video for the project</li>
+							<li>Published the project on NPM with semantic versioning</li>
+						</ul>
 						</p>
 					</card>
 				</div>
 
-				<div col="1/3">
+				<div col="1/2">
 					<card>
 						<h3>Folkmusic Dashboard</h3>
 						<div class="image-wrapper">
 							<img src="./images/fm-dash.png" alt="">
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-							aliqua.
+						<p>Vue-based dashboard for managing concert details, dates, and venues</p>
+						<b>My contribution:</b>
+						<ul ma="0" fs="s">
+							<li>Solo project - enhancement to Folkmusic.com client experience (Vue, JS, HTML, CSS, matchSorter)</li>
+							<li>Set up user sign up/sign in flow with Vue-Router and Firebase </li>
+							<li>Created demo user class to allow others to explore the dashboard and create their own public-facing concert listings</li>
+							<li>Added new functionality - autofill details of venues that John has already been to (this most of them!)</li>
+						</ul>
 						</p>
 					</card>
 				</div>
 
-				<div col="1/3">
+				<div col="1/2">
 					<card>
 						<h3>Mobility ETA</h3>
 						<div class="image-wrapper">
 							<img src="./images/mobeta.png" alt="">
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-							aliqua.
+						<p>Standalone paratransit trip checker for MARTA Mobility Customers</p>
+						<b>My contribution:</b>
+						<ul ma="0" fs="s">
+							<li>Split this project out from Paratransit Pal to keep us interacting with live data and real paratransit customers while
+								Paratranist Pal is being developed</li>
+							<li>Implemented new approach to scraping data when MARTA's website provider changed (PHP for login/accessing routes, front-end
+								JS for parsing & displaying trip data objects).</li>
+							<li>Designed and improved the UI specifically to be useful for people with cognitive impairment or who are unfamiliar
+								with technology</li>
+							<li>Added new functionality - autofill details of venues that John has already been to (this most of them!)</li>
+						</ul>
 						</p>
 					</card>
 				</div>
 			</grid>
+			<h3>
+				Other Projects
+			</h3>
+			<p>
+				I have a few bits and pieces on
+				<a href="http://codepen.io/marktnoonan/" att>CodePen</a>, and some old creative projects on
+				<a href="http://poetryapparatus.com/memorylane.htm" att>Poetry Apparatus</a>.
+			</p>
 		</section>
 		<hr id="bio">
 		<section>
@@ -318,13 +382,28 @@
 	</main>
 
 	<script>
+		let color = ''
+		const sections = Array.from(document.querySelectorAll("section:not(:first-of-type)"));
+		const fancyElement = document.querySelector(".heading-inside-text");
+		const headerLink = document.querySelector("header > a");
+		const headerLinks = Array.from(document.querySelectorAll("nav a"));
+		const firstSection = document.querySelector("section")
 
-		const sections = Array.from(document.querySelectorAll("section"));
+		// overwrites hover styles
+		headerLinks.forEach(link => {
+			link.addEventListener('mouseenter', () => {
+				console.log("mouseenter", { color })
+				link.style.borderColor = color;
+			})
+			link.addEventListener('mouseleave', () => {
+				console.log("mouseleave", { color })
+				link.style.borderColor = "transparent";
+			})
+		})
 
+		// sets color based on scroll position
 		function setColor(scrollEvent) {
-			let scrollPosition = window.scrollY;
-			let fancyElement = document.querySelector(".heading-inside-text");
-			let headerLink = document.querySelector("header > a");
+			const scrollPosition = window.scrollY;
 			if (scrollPosition > 20) {
 				if (!fancyElement.classList.contains("will-shrink"))
 					fancyElement.classList.add("will-shrink")
@@ -333,11 +412,14 @@
 				fancyElement.classList.remove("will-shrink")
 				headerLink.classList.remove("will-show")
 			}
-			let color = `hsla(${(scrollPosition / 3 % 360).toString().substr(0, 3)},60%,40%, 0.4)`
+			color = `hsla(${(Math.floor(scrollPosition / 3 % 360)).toString().substr(0, 3)},60%,40%, 0.4)`
 			sections.forEach(heading => {
 				heading.style.borderLeftColor = color;
 			});
 
+			// sets the underline and bg of the links Bare CSS styles nicely. Kind of brittle
+			document.styleSheets[0].rules[12].style.background = color;
+			firstSection.style.backgroundColor = color;
 		}
 		window.addEventListener('scroll', setColor);
 	</script>
