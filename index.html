@@ -22,8 +22,6 @@
 		}
 
 		section:first-of-type {
-			background: linear-gradient(-199deg, rgb(255, 255, 255) 88%, rgba(0, 0, 0, 0) 88%, rgb(255, 255, 255) 91%, rgba(0, 0, 0, 0) 95%, rgb(255, 255, 255) 94%);
-			border: 15px solid #fff;
 			padding: 1rem;
 		}
 
@@ -387,10 +385,7 @@
 		const fancyElement = document.querySelector(".heading-inside-text");
 		const headerLink = document.querySelector("header > a");
 		const headerLinks = Array.from(document.querySelectorAll("nav a"));
-		const firstSection = document.querySelector("section")
-
-		firstSection.style.backgroundColor = color;
-
+		const firstSection = document.querySelector("section");
 
 		// overwrites hover styles
 		headerLinks.forEach(link => {
@@ -415,14 +410,13 @@
 				fancyElement.classList.remove("will-shrink")
 				headerLink.classList.remove("will-show")
 			}
-			color = `hsla(${(Math.floor(scrollPosition / 3 % 360)).toString().substr(0, 3)},60%,40%, 0.4)`
+			color = `hsla(${(Math.floor(scrollPosition / 10 % 360)).toString().substr(0, 3)},30%,80%, 1)`
 			sections.forEach(heading => {
 				heading.style.borderLeftColor = color;
 			});
 
 			// sets the underline and bg of the links Bare CSS styles nicely. Kind of brittle
 			document.styleSheets[0].rules[12].style.background = color;
-			firstSection.style.backgroundColor = color;
 		}
 		window.addEventListener('scroll', setColor);
 	</script>
