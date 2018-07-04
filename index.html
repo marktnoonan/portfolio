@@ -8,26 +8,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link href="./BareCSS-v1.1.0/css/bare.min.css" rel="stylesheet">
 	<style>
-		/* card:hover {
-			background: rgb(187, 204, 255);
-			transition: background-color .2s linear;
-		}
-
-		card {
-			transition: background-color .6s linear;
-		} */
-
 		section:not(:first-of-type) {
 			border-left: 2px solid rgba(163, 41, 41, 0.3);
+		}
+
+		@media(max-width: 50rem) {
+			section:not(:first-of-type) {
+				margin-left: 6px;
+			}
 		}
 
 		section:first-of-type {
 			padding: 1rem;
 		}
-
-		/* card {
-			background-color: rgb(252, 252, 252);
-		} */
 
 		card>p,
 		card>h3 {
@@ -386,7 +379,6 @@
 		const sections = Array.from(document.querySelectorAll("section:not(:first-of-type)"));
 		const fancyElement = document.querySelector(".heading-inside-text");
 		const headerLink = document.querySelector("header > a");
-		const firstSection = document.querySelector("section");
 
 		// sets color based on scroll position
 		function setColor(scrollEvent) {
